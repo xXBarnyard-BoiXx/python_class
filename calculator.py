@@ -1,3 +1,7 @@
+OUT_OF_BOUNDS = float('-inf')
+
+
+
 def calculate(first_number, second_number, operation):
     result = 0
     if operation == "+":
@@ -9,7 +13,7 @@ def calculate(first_number, second_number, operation):
     elif operation == "/":
         result = first_number / second_number
     else:
-         result = -1
+         result = OUT_OF_BOUNDS
     return result
 
     return result
@@ -22,7 +26,7 @@ second_number = input("Whats your second number?\n")
 second_number = float(second_number)
 result = calculate(first_number, second_number, operation)
 
-if result == -1:
+if result == OUT_OF_BOUNDS:
     print("Please use a valid operator")
 else: 
     print(result)
